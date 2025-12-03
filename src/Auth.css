@@ -1,0 +1,101 @@
+/* ------------------ Animated Medical Background ------------------ */
+.auth-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ------------------ Glass Card ------------------ */
+.card {
+    width: 380px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------ Logo ------------------ */
+.logo img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ------------------ Tabs ------------------ */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.active-tab {
+    border-bottom: 3px solid #fff;
+}
+
+/* ------------------ Forms ------------------ */
+label {
+    display: block;
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #023e8a;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #03045e;
+}
+
+.error {
+    color: #ffb3b3;
+    margin-top: 10px;
+}
