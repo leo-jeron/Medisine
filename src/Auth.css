@@ -5,15 +5,33 @@
     justify-content: center;
     align-items: center;
 
+    /* Medical background image */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/006/712/985/non_2x/abstract-health-medical-science-healthcare-icon-digital-technology-science-concept-modern-innovation-treatment-medicine-on-hi-tech-future-blue-background-for-wallpaper-template-web-design-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Gradient overlay for animation */
+    position: relative;
+}
+
+.auth-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
     background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
+    opacity: 0.5; /* control visibility of gradient */
+    z-index: 0;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Make sure card stays above the overlay */
+.card {
+    position: relative;
+    z-index: 1;
 }
 
 /* ------------------ Glass Card ------------------ */
